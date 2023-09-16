@@ -25,3 +25,7 @@ Options:
 ## API使用方法
 
 参考： `sparkdesk/cli.py`
+
+## TODO
+
+1. 添加 async API
