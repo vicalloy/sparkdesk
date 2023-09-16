@@ -25,7 +25,9 @@ Options:
 ## API使用方法
 
 参考： `sparkdesk/cli.py`
+接口返回数据结构参考官方文档 https://www.xfyun.cn/doc/spark/Web.html
 
 ## TODO
 
 1. 添加 async API
+2. 添加返回JSON数据对应的 dataclass
