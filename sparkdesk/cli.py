@@ -8,9 +8,10 @@ from sparkdesk.chat import Chat
 @click.option("--app-id", required=True)
 @click.option("--api-secret", required=True)
 @click.option("--api-key", required=True)
-def _chat(app_id: str, api_secret: str, api_key: str):
+@click.option("--api-version", default="v1.1")
+def _chat(app_id: str, api_secret: str, api_key: str, api_version: str):
     authentication = Authentication(
-        api_key=api_key, api_secret=api_secret, api_version="v1.1"
+        api_key=api_key, api_secret=api_secret, api_version=api_version
     )
     chat = Chat(authentication, app_id)
     print("-----------------------")
