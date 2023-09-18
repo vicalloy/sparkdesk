@@ -2,7 +2,9 @@
 
 ## 安装
 
-TODO ...
+```shell
+pip install 'sparkdesk[cli]'
+```
 
 ## 讯飞星火 API 申请
 

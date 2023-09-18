@@ -8,3 +8,6 @@ init-pre-commit:
 
 update-pre-commit:
 	pre-commit autoupdate
+
+publish:
+	poetry publish --build

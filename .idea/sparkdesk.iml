@@ -5,6 +5,7 @@
       <excludePattern pattern=".mypy_cache" />
       <excludePattern pattern=".pytest_cache" />
       <excludePattern pattern=".ruff_cache" />
+      <excludePattern pattern="dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

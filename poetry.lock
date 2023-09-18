@@ -15,7 +15,7 @@ files = [
 name = "click"
 version = "8.1.7"
 description = "Composable command line interface toolkit"
-optional = false
+optional = true
 python-versions = ">=3.7"
 files = [
     {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
@@ -467,7 +467,10 @@ files = [
     {file = "websockets-11.0.3.tar.gz", hash = "sha256:88fc51d9a26b10fc331be344f1781224a375b78488fc343620184e95a4b27016"},
 ]
 
+[extras]
+cli = ["click"]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "28057158849c39885250e6214e2d51cfa5bc2d3bce8ec0a59f819daf212a8c90"
+content-hash = "0134ce4edf744384cdc2f2c50a998b270b31fc96e9ed9bc3268f3b10c0b9cbd5"
