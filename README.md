@@ -1,4 +1,6 @@
-# sparkdesk 讯飞星火大模型api
+# sparkdesk 讯飞星火大模型API
+
+讯飞星火大模型API。支持 `sync` 和 `async` 。
 
 ## 安装
 
@@ -21,15 +23,15 @@ Options:
   --app-id TEXT      [required]
   --api-secret TEXT  [required]
   --api-key TEXT     [required]
+  --api-version TEXT
   --help             Show this message and exit.
 ```
 
 ## API使用方法
 
-参考： `sparkdesk/cli.py`
+参考： `sparkdesk/cli.py` 和 `sparkdesk/async/cli.py`
 接口返回数据结构参考官方文档 https://www.xfyun.cn/doc/spark/Web.html
 
 ## TODO
 
-1. 添加 async API
-2. 添加返回JSON数据对应的 dataclass
+1. 添加返回JSON数据对应的 dataclass

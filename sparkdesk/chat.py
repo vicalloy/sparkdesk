@@ -1,14 +1,17 @@
-from typing import Dict, List
+from typing import Dict, List, Type
 
 from sparkdesk.authentication import Authentication
 from sparkdesk.chat_utils import limit_chat_history
-from sparkdesk.completion import ChatCompletion
+from sparkdesk.completion import BaseChatCompletion, ChatCompletion
 
 
-class Chat:
+class BaseChat:
     """
     Class for creating chat
     """
+
+    chat_history: List[Dict[str, str]]
+    completion_cls: Type[BaseChatCompletion]
 
     def __init__(
         self,
@@ -37,13 +40,22 @@ class Chat:
             max_tokens (int, optional):
                 The maximum number of tokens to generate. Defaults to 2048.
         """
-        self.chat_completion = ChatCompletion(
+        self.chat_completion = self.completion_cls(
             authentication, app_id, user_id, domain, temperature, max_tokens
         )
         self.chat_history: List[Dict[str, str]] = []
 
     def reset_chat_context(self):
         self.chat_history = []
+
+
+class Chat(BaseChat):
+    """
+    Class for creating chat
+    """
+
+    completion_cls = ChatCompletion
+    chat_completion: ChatCompletion
 
     def ask(self, question: str):
         """
